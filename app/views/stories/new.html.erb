@@ -1,0 +1,16 @@
+
+<div class= "booyah-box col-12">
+  <br />
+  <h1> Add Your Story </h1>
+  <div class= "story_form" >
+    <%= simple_form_for @story do |f| %>
+      <%= f.input :title %>
+      <%= f.input :description %>
+      <%= f.input :location %>
+      <%= f.input :event %>
+      <%= f.submit 'Create', class:  'btn primary btn' %>
+
+    <% end %> 
+  </div>
+
+</div> 

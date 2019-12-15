@@ -1,8 +1,36 @@
 <br />
 
+
+
+
+
 <body>
-  <div class="text-center">
-    <h1> Show Journal  </h1>
+  <div class="title">
+    <h1> Travel Journal  </h1>
   </div>
+
+<div class= "booyah-box col-12">
+  <% @places.each do |place| %>
+    <div>
+      <h2><%= place.title %></h2><br />
+      <i><%= place.address %></i><br />
+      <p><%= place.description %></p><br />
+    </div>
+
+    <hr />
+  <% end %>
+</div>
+
+
+<div class = "booyah-box col-12 ">
+  <% @stories.each do |story| %>
+    <div>
+      <h2><%= link_to story.title, story_path(story) %> </h2><br/>
+    </div>
+    <hr />
+  <% end %> 
+
+
+</div>
 
 </body>
